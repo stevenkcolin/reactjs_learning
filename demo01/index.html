@@ -6,11 +6,24 @@
     <script src="../build/browser.min.js"></script>
   </head>
   <body>
-    <div id="example"></div>
+    <div id="example">1111</div>
     <script type="text/babel">
       ReactDOM.render(
         <h1>Hello, world!</h1>,
         document.getElementById('example')
+      );
+    </script>
+    <div id = "div1">div1</div>
+    <div id="div2">div2</div>
+    <script type="text/babel">
+      ReactDOM.render(
+        <input type="text"  value="div1"  />,
+        document.getElementById("div1")
+      );
+
+      ReactDOM.render(
+        <input type="button" value="div2"/> ,
+        document.getElementById("div2")
       );
     </script>
   </body>
