@@ -6,19 +6,65 @@
     <script src="../build/browser.min.js"></script>
   </head>
   <body>
-    <div id="example"></div>
+    <!-- <div id="example"></div>
     <script type="text/babel">
-      var names = ['Alice', 'Emily', 'Kate'];
+      var lists = ['1', '2', '3'];
 
       ReactDOM.render(
         <div>
         {
-          names.map(function (name) {
+          lists.map(function (name) {
             return <div>Hello, {name}!</div>
           })
         }
         </div>,
         document.getElementById('example')
+      );
+    </script>
+
+    <div id="div2">
+
+    </div>
+    <script type="text/babel">
+      var feb = ['1','1','2','3','5','8','13','21','34','45'];
+
+      ReactDOM.render(
+        <div>
+        {
+          feb.map(function(value){
+            return <div>feb: {value}</div>
+          })
+        }
+        </div>,document.getElementById("div2")
+      );
+    </script> -->
+
+    <div id="div2">
+      div2
+    </div>
+    <script type="text/babel">
+      ReactDOM.render(
+        <h1>aaaa</h1>, document.getElementById("div2")
+      );
+    </script>
+
+    <div id="div3">
+      div3
+    </div>
+    <script type="text/babel">
+      var list1 = ["1","1","2","3","5","8"];
+      ReactDOM.render(
+        <div>
+        {
+          list1.map(function(value){
+            var result = parseInt(value);
+            result += result;
+            return <div>
+            {result}
+            </div>
+          })
+        }</div>
+        ,document.getElementById("div3")
       );
     </script>
   </body>
