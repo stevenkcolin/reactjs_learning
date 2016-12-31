@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <div id="steve"></div>
+    <script type="text/babel">
+      var HelloMessage = React.createClass({
+        render: function() {
+          return <h1>Hello {this.props.name}</h1>;
+        }
+      });
+
+      ReactDOM.render(
+        <HelloMessage name="steve" />,
+        document.getElementById('example')
+      );
+
+      var HelloSteve = React.createClass({
+        render:function(){
+          return <h2>{this.props.id}+{this.props.id}</h2>;
+        }
+      });
+
+      ReactDOM.render(
+        <HelloSteve id="ha"></HelloSteve>,
+        document.getElementById("steve")
+      );
+
+    </script>
+  </body>
+</html>
