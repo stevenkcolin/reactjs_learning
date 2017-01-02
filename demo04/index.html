@@ -8,7 +8,7 @@
   <body>
     <div id="example"></div>
     <div id="steve"></div>
-    <script type="text/babel">
+    <!-- <script type="text/babel">
       var HelloMessage = React.createClass({
         render: function() {
           return <h1>Hello {this.props.name}</h1>;
@@ -19,7 +19,7 @@
         <HelloMessage name="steve" />,
         document.getElementById('example')
       );
-
+      // 练习1
       var HelloSteve = React.createClass({
         render:function(){
           return <h2>{this.props.id}+{this.props.id}</h2>;
@@ -30,7 +30,30 @@
         <HelloSteve id="ha"></HelloSteve>,
         document.getElementById("steve")
       );
+    </script> -->
 
+    <!-- 练习2 -->
+    <!-- **************************************************************** -->
+    <!-- <input type="text" value="hello world!" size=100 /> -->
+    <div id="p2">
+      p2
+    </div>
+    <script type="text/babel">
+    var SampleClass = React.createClass({
+        render:function(){
+          return <input type="text" size={this.props.size} value={this.props.value}  />;
+        }
+      });
+    // var HelloSteve = React.createClass({
+    //   render:function(){
+    //     return <h2>{this.props.id}+{this.props.id}</h2>;
+    //   }
+    // });
+
+    ReactDOM.render(
+      <SampleClass size="100" value="test002"></SampleClass>,
+      document.getElementById("p2")
+    );
     </script>
   </body>
 </html>
