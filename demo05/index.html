@@ -61,17 +61,17 @@
             <li>
                 004
             </li>
-            {React.Children.map(this.props.children, function(aaa){
-              return <li>
-              **{aaa}**{aaa}**
-              </li>
-            })}
+            { React.Children.map(this.props.children, function(aaa){ return (
+            <li>
+                ****{aaa}****{aaa}****
+            </li>
+            ) }) }
         </ol>
         ); } }); ReactDOM.render(
         <List02>
-            <span>1111</span>
-            <span>2222</span>
-            <span>3333</span>
+            <span>steve</span>
+            <span>nathan</span>
+            <span>roger</span>
         </List02>,document.getElementById("test002"));
     </script>
 
