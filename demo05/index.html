@@ -1,35 +1,82 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <script src="../build/react.js"></script>
     <script src="../build/react-dom.js"></script>
     <script src="../build/browser.min.js"></script>
-  </head>
-  <body>
-    <div id="example"></div>
+</head>
+
+<body>
+    <!-- <div id="example"></div>
     <script type="text/babel">
-      var NotesList = React.createClass({
-        render: function() {
-          return (
-            <ol>
-              {
-                React.Children.map(this.props.children, function (child) {
-                  return <li>{child}</li>;
-                })
-              }
-            </ol>
-          );
-        }
-      });
-
-      ReactDOM.render(
+        var NotesList = React.createClass({ render: function() { return (
+        <ol>
+            { React.Children.map(this.props.children, function (child) { return
+            <li>{child}</li>; }) }
+        </ol>
+        ); } }); ReactDOM.render(
         <NotesList>
-          <span>hello</span>
-          <span>world</span>
-        </NotesList>,
-        document.getElementById('example')
-      );
+            <span>hello</span>
+            <span>world</span>
+        </NotesList>, document.getElementById('example') );
     </script>
-  </body>
-</html>
 
+    <!-- 练习001 -->
+    <!-- <div id="test001">
+        test001
+    </div>
+    <script type="text/babel">
+        var List=React.createClass({ // console.log("haha"); render: function(){ return (
+        <ol type="A" start="10">
+            { React.Children.map(this.props.children, function(child){ return
+            <li>
+                <h1>{child}</h1></li>; }) }
+        </ol>
+        ); } }) ReactDOM.render(
+        <List>
+            <span>1111</span>
+            <span>2222</span>
+            <span>3333</span>
+            <span>4444</span>
+        </List>, document.getElementById("test001") );
+    </script> -->
+
+    <!-- 练习002 -->
+    <div id=test002>
+        test002
+    </div>
+    <script type="text/babel">
+        var List02 = React.createClass({ render: function(){ return (
+        <ol type="a" start="3">
+            <li>
+                001
+            </li>
+            <li>
+                002
+            </li>
+            <li>
+                003
+            </li>
+            <li>
+                004
+            </li>
+            {
+              React.Children.map(this.props.children, function(child){
+                return <li>
+                {child}
+                </li>
+              })
+            }
+        </ol>
+        ); } }); ReactDOM.render(
+        <List02>
+            <span>1111</span>
+            <span>2222</span>
+            <span>3333</span>
+        </List02>,document.getElementById("test002"));
+    </script>
+
+</body>
+
+</html>
